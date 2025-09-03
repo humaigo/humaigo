@@ -1,8 +1,7 @@
 # 🧬 humaigo - The Self-Evolving Application
 
 <div align="center">
-
-![HumAiGo Logo](https://via.placeholder.com/400x100/1a1a2e/00ffff?text=HumAiGo)
+<img src="https://humaigo.com/assets/images/humaigo_noviewbox.svg">
 
 **The world's first truly self-evolving application that programs itself through conversation**
 
