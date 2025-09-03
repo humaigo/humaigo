@@ -82,7 +82,7 @@ humaigo: *Updates method with animations*
 ### Installation
 1. Download `humaigo_setup.exe`
 2. Run the installer
-3. Go to [humaigo.com](https://humaigo.com) to get your license and read the about page for the installation process
+3. Go to [humaigo.com](https://humaigo.com) to get your license and read the about page for the configuration process
 4. Launch Claude Desktop and start evolving!
 
 ## 🎯 Use Cases
