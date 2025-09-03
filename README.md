@@ -1,9 +1,8 @@
 # 🧬 humaigo - The Self-Evolving Application
 
 <div align="center">
-<img src="https://humaigo.com/assets/images/humaigo_noviewbox.svg">
 
-**The world's first truly self-evolving application that programs itself through conversation**
+**The self-evolving application that programs itself through conversation**
 
 [![Download](https://img.shields.io/github/downloads/humaigo/humaigo/total?style=for-the-badge&logo=github&color=00ffff)](https://github.com/humaigo/humaigo/releases/latest)
 [![License](https://img.shields.io/github/license/humaigo/humaigo?style=for-the-badge&color=70d44b)](LICENSE)
