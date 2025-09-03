@@ -83,7 +83,8 @@ humaigo: *Updates method with animations*
 1. Download `humaigo_setup.exe`
 2. Run the installer
 3. Follow the setup wizard
-4. Launch humaigo and start evolving!
+4. Go to humaigo.com to get your licence and read the about
+5. Launch Claude Desktop and start evolving!
 
 ## 🎯 Use Cases
 
