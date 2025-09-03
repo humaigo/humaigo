@@ -7,7 +7,7 @@
 [![Download](https://img.shields.io/github/downloads/humaigo/humaigo/total?style=for-the-badge&logo=github&color=00ffff)](https://github.com/humaigo/humaigo/releases/latest)
 [![Stars](https://img.shields.io/github/stars/humaigo/humaigo?style=for-the-badge&color=ff6b00)](https://github.com/humaigo/humaigo/stargazers)
 
-[🚀 Download](#-download) • [🎬 Watch Demo](#-demo) • [📖 Documentation](#-documentation) • [🌍 Website](https://humaigo.com)
+[🚀 Download](#-download) • [🎬 Watch Demo](#-demo) • [📖 Documentation](https://humaigo.com/about) • [🌍 Website](https://humaigo.com)
 
 </div>
 
