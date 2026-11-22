@@ -53,6 +53,9 @@ a shared machine, or for a machine that holds things the assistant should never 
 - Keep your client's per-call approval enabled, and read the code of `AddMethod` calls. If your client offers a mode that
   approves tool calls automatically, do not use it for `AddMethod` and `UpdateMethod`: their argument is the code that will
   run. Approving read-only tools automatically is a reasonable middle ground; the rest should be read.
+- `CallMethod` can call any tool of the registry, including `RunProcess` or `WriteTextFile` if you have added them. If your
+  client lets you set the approval of each tool, do not allow `CallMethod` permanently: it would bypass the confirmation you
+  set on the others.
 - Never start the server through a network service, and never expose its input and output to others.
 - Check the checksums of a release before running it.
 

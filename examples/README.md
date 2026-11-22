@@ -39,3 +39,8 @@ A note on the code: a tool is a method of a class that derives from the base met
 Five Markdown documents (a role, a skill, security rules and two how-tos) and `ImportDocuments.cs`, a tool that loads
 them into the data store. `GetHowTo` then lists them, so the assistant knows what guidance exists. See
 [`harness/README.md`](harness/README.md).
+
+## `toolbox/`: a registry described by files
+
+`ApplyToolbox.cs` and `ExportToolbox.cs` turn a folder of `.cs` and `.md` files into the tools and documents of a registry,
+and back. A small `sample/` toolbox is included. See [`toolbox/README.md`](toolbox/README.md).
