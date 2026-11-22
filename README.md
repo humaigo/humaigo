@@ -125,8 +125,8 @@ thus carry roles, procedures, rules and recipes along with its tools. It is guid
 
 ## Examples
 
-The [`examples/`](examples) folder holds four, compiled and run by the tests: an API called in one request, tools that
-reuse each other by copy, tools whose data a later conversation picks up, and Markdown documents that guide the assistant.
+The [`examples/`](examples) folder holds five, compiled and run by the tests: an API called in one request, tools that
+reuse each other by copy, tools whose data a later conversation picks up, Markdown documents that guide the assistant, and a toolbox folder applied to a registry.
 
 The release archives carry the same folder next to the executable, so the files are on disk: `GetInstallDirectory` tells
 where. From a clone, `dotnet run --project src/HumAiGo -- --registry demo` starts the server on a test toolbox.
