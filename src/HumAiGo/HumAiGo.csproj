@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>humaigo</AssemblyName>
+    <RootNamespace>HumAiGo</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Product>HumAiGo</Product>
+    <Description>An MCP server that lets an AI assistant add tools to itself, written in C#, and use them in the same conversation.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HumAiGo.McpServer\HumAiGo.McpServer.csproj" />
+  </ItemGroup>
+
+  <!-- The localized resource assemblies of the dependencies are not needed at run time. -->
+  <Target Name="RemoveSatelliteAssemblies" BeforeTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)" Condition="'%(ResolvedFileToPublish.Culture)' != ''" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <None Remove="humaigo_config.json" />
+    <Content Include="humaigo_config.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- The examples travel with the executable: in a release archive they sit next to it, and GetInstallDirectory says where. -->
+  <ItemGroup>
+    <None Include="..\..\examples\**\*" Link="examples\%(RecursiveDir)%(Filename)%(Extension)"
+          CopyToOutputDirectory="Never" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

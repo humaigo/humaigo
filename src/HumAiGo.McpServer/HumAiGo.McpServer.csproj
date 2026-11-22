@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>HumAiGo.McpServer</RootNamespace>
+    <Description>The registry, compiler and store behind the HumAiGo MCP server.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Compiles the C# code of dynamic methods at run time. -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
+  </ItemGroup>
+
+</Project>

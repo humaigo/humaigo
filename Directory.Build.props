@@ -1,0 +1,13 @@
+<Project>
+
+  <!-- Properties shared by every project of the solution. -->
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <Authors>HumAiGo contributors</Authors>
+    <Company>HumAiGo contributors</Company>
+    <Copyright>Copyright (c) 2026 HumAiGo contributors</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+</Project>

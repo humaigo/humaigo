@@ -1,0 +1,77 @@
+name: Release
+
+# Publishes self-contained builds when a version tag is pushed, for example: git tag v0.1.0 && git push --tags
+#
+# The builds are not single-file on purpose: the server compiles C# at run time and needs the libraries
+# of the runtime as files next to the executable.
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ matrix.rid }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - rid: win-x64
+            os: windows-latest
+          - rid: linux-x64
+            os: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Test
+        run: dotnet test HumAiGo.sln --configuration Release
+
+      - name: Publish
+        run: >
+          dotnet publish src/HumAiGo/HumAiGo.csproj
+          --configuration Release
+          --runtime ${{ matrix.rid }}
+          --self-contained true
+          --output publish/humaigo
+
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path publish/humaigo -DestinationPath "humaigo-${{ github.ref_name }}-${{ matrix.rid }}.zip"
+
+      - name: Package (Linux)
+        if: runner.os != 'Windows'
+        run: (cd publish && zip -r "../humaigo-${{ github.ref_name }}-${{ matrix.rid }}.zip" humaigo)
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: humaigo-${{ matrix.rid }}
+          path: humaigo-*.zip
+
+  release:
+    name: Create the release
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Checksums
+        run: (cd dist && sha256sum ./*.zip > SHA256SUMS.txt && cat SHA256SUMS.txt)
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true

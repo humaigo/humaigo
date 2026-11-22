@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+publish/
+artifacts/
+
+# IDE and tool files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.rsuser
+
+# Runtime data: the registries a server instance creates next to its executable
+data/
+
+# Test results and coverage
+TestResults/
+*.trx
+coverage/
+
+# OS files
+Thumbs.db
+.DS_Store

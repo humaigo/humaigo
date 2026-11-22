@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="title desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="title">The HumAiGo loop</title>
+  <desc id="desc">You ask for a tool, the assistant writes it, the server compiles it on its own, the tool runs, and tools and data are kept for the next conversation. You stay in the loop: you read the code before it runs and what comes back.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#57606a"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#0969da"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="400" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- 1 to 5 -->
+  <g stroke="#57606a" stroke-width="1.5" fill="#f6f8fa">
+    <rect x="40" y="56" width="220" height="84" rx="10"/>
+    <rect x="300" y="56" width="220" height="84" rx="10"/>
+    <rect x="560" y="56" width="220" height="84" rx="10"/>
+    <rect x="560" y="260" width="220" height="84" rx="10"/>
+    <rect x="40" y="260" width="220" height="84" rx="10"/>
+  </g>
+
+  <g fill="#1f2328" text-anchor="middle">
+    <text x="150" y="92" font-size="15" font-weight="600">1. You ask</text>
+    <text x="150" y="116" font-size="13" fill="#57606a">for a tool, in words</text>
+
+    <text x="410" y="92" font-size="15" font-weight="600">2. It writes the code</text>
+    <text x="410" y="116" font-size="13" fill="#57606a">C#, one method</text>
+
+    <text x="670" y="92" font-size="15" font-weight="600">3. The server compiles</text>
+    <text x="670" y="116" font-size="13" fill="#57606a">alone; saved only if it works</text>
+
+    <text x="670" y="296" font-size="15" font-weight="600">4. The tool runs</text>
+    <text x="670" y="320" font-size="13" fill="#57606a">a result and data come back</text>
+
+    <text x="150" y="296" font-size="15" font-weight="600">5. It is all kept</text>
+    <text x="150" y="320" font-size="13" fill="#57606a">tools, data and documents</text>
+  </g>
+
+  <!-- the loop -->
+  <g fill="none" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M262 98H298"/>
+    <path d="M522 98H558"/>
+    <path d="M670 142V258"/>
+    <path d="M558 302H262"/>
+  </g>
+  <path d="M150 258V142" fill="none" stroke="#0969da" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <text x="164" y="186" font-size="12" fill="#0969da">the next conversation</text>
+  <text x="164" y="204" font-size="12" fill="#0969da">starts with all of it</text>
+
+  <!-- the human -->
+  <rect x="300" y="170" width="220" height="86" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5"/>
+  <g fill="#1f2328" text-anchor="middle" font-size="13">
+    <text x="410" y="196" font-weight="600">You stay in the loop</text>
+    <text x="410" y="217">you read the code before it runs,</text>
+    <text x="410" y="235">and what comes back</text>
+  </g>
+</svg>
