@@ -3,8 +3,14 @@ updates:
   - package-ecosystem: nuget
     directory: "/"
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      nuget:
+        patterns: ["*"]
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
