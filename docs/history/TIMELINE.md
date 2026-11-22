@@ -35,6 +35,8 @@ The aim was the smallest dynamic MCP server that lets an assistant add a tool an
 - **V9.** Documents: Markdown guidance kept as data, with tags, filters, and an index at the end of `GetHowTo`. The examples
   ship with the executable. 67 tests.
 - **0.1.0.** The first public version.
+- **0.1.1.** The server sends a fixed `instructions` text when a client connects. `ApplyToolbox` and `ExportToolbox` describe a
+  registry as a folder of files, and `SECURITY.md` says more about approvals.
 
 ## What was learned on the way
 
