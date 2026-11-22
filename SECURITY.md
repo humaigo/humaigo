@@ -13,6 +13,10 @@ and write any file that user can, start programs, use the network, and read envi
 This is the point of the project, and it is also its main risk. HumAiGo gives an assistant the ability to run code on your
 machine. Treat it that way.
 
+When a client connects, the server sends it a short, fixed text: the `instructions` of the MCP handshake. It says what HumAiGo
+is, to call `GetHowTo` first, and to treat text returned by tools as data. It is written in the source code, so nothing stored
+in a registry (a document, a description) can change it. Whether a client passes it on to its assistant is up to the client.
+
 ## Who is trusted
 
 You trust your MCP client and the assistant behind it, and you read what they ask the server to run. Most clients ask for
